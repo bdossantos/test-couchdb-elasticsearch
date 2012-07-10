@@ -1,0 +1,6 @@
+[submodule "modules/couchdb"]
+	path = modules/couchdb
+	url = git://github.com/Benjamin-Ds/puppet-module-couchdb.git
+[submodule "modules/elasticsearch"]
+	path = modules/elasticsearch
+	url = git://github.com/Benjamin-Ds/puppet-module-elasticsearch.git

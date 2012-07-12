@@ -8,10 +8,11 @@ Vagrant::Config.run do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "squeeze64"
+  config.vm.box_url = "https://dl.dropbox.com/u/5236486/squeeze64.box"
 
   # Customize memory
   config.vm.customize ["modifyvm", :id, "--memory", "256"]
-  
+
   config.vm.provision :shell, :inline => "[ -f /tmp/updated ] || apt-get update && touch /tmp/updated"
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "./"
@@ -19,7 +20,7 @@ Vagrant::Config.run do |config|
     puppet.manifest_file = "site.pp"
     puppet.options = "--verbose"
   end
-    
+
   config.vm.define :es do |es|
     es.vm.network :hostonly, "192.168.33.10"
     es.vm.forward_port 5984, 5984

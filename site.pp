@@ -11,5 +11,6 @@ node default {
   elasticsearch::plugin { 'couchdb-river':
     username  => 'elasticsearch',
     repo_name => 'elasticsearch-river-couchdb',
+    version   => '1.1.0',
   }
 }

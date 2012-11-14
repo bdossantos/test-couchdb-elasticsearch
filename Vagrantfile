@@ -7,8 +7,8 @@ Vagrant::Config.run do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "squeeze64"
-  config.vm.box_url = "https://dl.dropbox.com/u/5236486/squeeze64.box"
+  config.vm.box = "precise64"
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
   # Customize memory
   config.vm.customize ["modifyvm", :id, "--memory", "256"]

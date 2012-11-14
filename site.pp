@@ -13,6 +13,5 @@ node default {
     username  => 'elasticsearch',
     repo_name => 'elasticsearch-river-couchdb',
     version   => '1.1.0',
-    require   => Class['elasticsearch'],
   }
 }
